@@ -1,4 +1,5 @@
 package com.titancache.core;
+import com.titancache.api.CacheMetrics;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
