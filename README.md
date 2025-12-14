@@ -129,6 +129,8 @@ python benchmark.py
 ### Results
 The script exports raw performance data to [`titan_nuclear_benchmark.csv`](titan_nuclear_benchmark.csv), including timestamps, latency (ms), and payload sizes for every request. You can use this CSV for further data analysis or visualization.
 
+View the full dataset on **Kaggle**: [Distributed Cache Performance Logs (Synthetic)](https://www.kaggle.com/datasets/imrahnf/distributed-cache-performance-logs-synthetic)
+
 ---
 
 Built with ❤️ by [Omrahn Faqiri](https://omrahnfaqiri.com)
