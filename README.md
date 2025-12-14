@@ -125,6 +125,10 @@ pip install -r requirements.txt
 # Run the script
 python benchmark.py
 ```
+
+### Results
+The script exports raw performance data to [`titan_nuclear_benchmark.csv`](titan_nuclear_benchmark.csv), including timestamps, latency (ms), and payload sizes for every request. You can use this CSV for further data analysis or visualization.
+
 ---
 
 Built with ❤️ by [Omrahn Faqiri](https://omrahnfaqiri.com)
