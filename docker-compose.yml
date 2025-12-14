@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  titan-server:
+    build: .
+    container_name: titan-server
+    ports:
+      - "8080:8080"
+    environment:
+      - TITAN_CACHE_CAPACITY=200000
+      - TITAN_CACHE_MAX_ENTRY_SIZE_BYTES=1048576
+    networks:
+      - titan-net
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: titan-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - titan-net
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: titan-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    networks:
+      - titan-net
+    depends_on:
+      - prometheus
+
+networks:
+  titan-net:
+    driver: bridge

@@ -11,7 +11,7 @@ class TitanCacheTest {
     @BeforeEach
     void setUp() {
         // create a tiny cache
-        cache = new TitanCache<>(3);
+        cache = new TitanCache<>(3, 100);
     }
 
     @Test
